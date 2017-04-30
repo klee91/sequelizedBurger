@@ -1,0 +1,66 @@
+* {
+    font-family: 'Raleway', sans-serif;
+}
+body {
+    background-color: #5EAFA6;
+}
+
+#topbar {
+    height: 150px;
+    position: relative;
+    background-color: black;
+    border-bottom: solid 2px #BAF2E7;
+}
+
+#burgerimg1 {
+    display: block;
+    margin: auto;
+    width: 150px; 
+    height: 150px; 
+}
+
+#burgerimg2 {
+    display: block;
+    margin: auto;
+    width: 150px; 
+    height: 150px; 
+}
+
+#listedBurgs {
+    position: relative;
+}
+
+.dataName {
+    float:left;
+}
+
+.form1 {
+    float: left;
+}
+
+#title {
+    margin: auto;
+    text-align: center;
+    padding: 30px 0 0 0;
+    font-family: 'Pacifico', cursive;
+    font-size: 60px;
+    color: #ffd217;
+    bottom: 50px;
+    text-shadow: 3px 3px 0 #FFF, 6px 6px 0 #5EAFA6;
+}
+hr {
+    text-align: center;
+    width: 80%;
+}
+
+h2 {
+    text-align:center;
+}
+#main {
+    margin: auto;
+}
+
+#addBurger {
+    margin: auto;
+    height: 200px;
+}

@@ -1,0 +1,56 @@
+
+<div id="topbar">
+    <h1 class="text-center" id="title">Eat-Da-Burger</h1>
+</div>
+
+<div class ="container-fluid" id="main">
+    <div class="col-xs-6 col-xs-offset-3">
+        <!--Listed Burgers-->
+        <div class="col-xs-6" id="listedBurgs">
+        <img id ="burgerimg1" alt="burger1" src="http://i67.tinypic.com/2zscvbb.png">
+            <h2>Burgers to Eat</h2>
+            <hr>
+                {{#each burgers}}
+                    {{#unless this.devoured}}
+                    <div class="burgerItem">
+                        <div class="dataName">        
+                            {{this.id}}. {{this.burger_name}} &ensp;
+                        </div>
+
+                        <form class="form1 create-update-form" action="/{{this.id}}?_method=PUT" method="POST">
+                        <button type="submit" class="btn btn-danger btn-sm" name ='id' value ='true'><i class="fa fa-cutlery" aria-hidden="true"></i> Devour It!</button>
+                        </form>
+                    </div>
+                    <br>
+                    <br>
+                    {{/unless}}
+                {{/each}}
+        </div>
+
+        <!--Devoured Burgers-->
+        <div class="col-xs-6" id="devouredBurgs">
+            <img id ="burgerimg2" alt="burger2" src="http://i64.tinypic.com/afhg9j.png">
+            <h2>Devoured Burgers</h2>
+            <hr>
+            {{#each burgers}}
+                {{#if this.devoured}}
+                <div class="burgerItem">
+                 {{this.burger_name}}
+                </div>
+                {{/if}}
+            {{/each}}
+        </div>
+    </div>
+</div>
+<div class="container-fluid text-center" id="addBurger">
+    <h2>Add a Burger</h2>
+    <form class="create-update-form" action="/" method="POST">
+
+    <div class="form-group">
+        <label for="bn">Burger Name:</label>
+        <input type="text" id="bn" name="name">
+    </div>
+
+    <button type="submit">Add Burger</button>
+    </form>
+</div>
